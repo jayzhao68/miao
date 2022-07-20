@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #toggle {
+    display: none;
+  }
+
+  #toggle+label {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 60px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 60px;
+  }
+
+  #toggle+label::before,
+  #toggle+label::after {
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+  }
+
+  #toggle+label::before {
+    right: 1px;
+    border-radius: 60px;
+    background-color: #f5f5f5;
+    content: "";
+    transition: background-color 0.4s;
+  }
+
+  #toggle+label::after {
+    width: 58px;
+    border-radius: 100%;
+    background-color: #fff;
+    content: "";
+    transition: margin 0.4s;
+    box-shadow: 1px 0px 5px 1px #ddd inset;
+
+  }
+
+  #toggle:checked+label::before {
+    background-color: green;
+  }
+
+  #toggle:checked+label::after {
+    margin-left: 62px;
+  }
+
+</style>
+
+<body>
+  <div>
+    <input type="checkbox" id="toggle">
+    <label for="toggle"></label>
+  </div>
+
+
+  </div>
+</body>
+
+</html>
