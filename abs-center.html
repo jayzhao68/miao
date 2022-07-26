@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .father {
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 300px;
+  }
+
+  .son {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .part1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+  }
+
+  .part2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: tan;
+  }
+
+  .a1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: tan;
+  }
+
+  .a2 {
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+  }
+
+</style>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+  <br>
+  <div class="part1">
+    <div class="part2"></div>
+  </div>
+  <br>
+  <div class="a1">
+    <div class="a2"></div>
+  </div>
+</body>
+
+</html>
