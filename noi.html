@@ -1,0 +1,168 @@
+<script type="x" id="ch0103/01">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  console.log(a + b)
+
+</script>
+
+<script type="x" id="ch0103/02">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  console.log((a + b) * c)
+</script>
+
+<script type="x" id="ch0103/03">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var result = (a + b) / c - 0.5
+  result.toFixed(0)
+  console.log(result.toFixed(0))
+</script>
+
+<script type="x" id="ch0103/04">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var result = a / b
+  var result1 = a % b
+  result.toFixed(0)
+  console.log(result.toFixed(0) +'' + result1)
+
+</script>
+
+<script type="x" id="ch0103/05">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var result = a / b
+  result.toFixed(9)
+  console.log(result.toFixed(9))
+</script>
+
+<script type="x" id="ch0103/06">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var result = (b / a) * 100
+  result.toFixed(3)
+  console.log(result.toFixed(3) + '%')
+</script>
+
+<script type="x" id="ch0103/07">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var d = Number(prompt())
+  var x = Number(prompt())
+  var result = (a * (x * x * x)) + (b * (x * x) + (c * x)) + d
+  result.toFixed(7)
+  console.log(result.toFixed(7))
+</script>
+
+<script type="x" id="ch0103/08">
+  var a = Number(prompt())
+  var result = 5 * (a - 32) / 9
+  result.toFixed(5)
+  console.log(result.toFixed(5))
+</script>
+
+<script type="x" id="ch0103/09">
+  var a = Number(prompt())
+  var pi = 3.14159
+  var b = 2 * pi
+  var c = 2 * pi * a
+  var d = pi * a * a
+
+  console.log(b.toFixed(4) + '' + c.toFixed(4) + '' + d.toFixed(4))
+</script>
+
+<script type="x" id="ch0103/10">
+  var r1 = Number(prompt())
+  var r2 = Number(prompt())
+  var result = 1 / (1 / r1 + 1 / r2)
+  result.toFixed(2)
+  console.log(result.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/11">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = a % b
+  console.log(c)
+</script>
+
+<script type="x" id="ch0103/12">
+  var r = Number(prompt())
+  var pi = 3.14
+  var v = 4 / 3 * pi * r ** 3
+  console.log(v.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/13">
+  var a = Number(prompt())
+  var a1 = (a - a % 100) / 100
+  var a2 = (a - (a - a % 100) - (a % 10)) / 10
+  var a3 = a % 10
+  console.log(String(a3) + String(a2) + String(a1))
+</script>
+
+<script type="x" id="ch0103/14">
+  var pi = 3.14159
+  var h = Number(prompt())
+  var r = Number(prompt())
+  var result = 20000 / (pi * r * r * h) + 0.5
+  console.log(result.toFixed(0))
+</script>
+
+<script type="x" id="ch0103/15">
+  var n = Number(prompt())
+  var x = Number(prompt())
+  var y = Number(prompt())
+  var result = n - (y / x) - 0.5
+  result.toFixed(0)
+  console.log(result.toFixed(0))
+
+</script>
+
+<script type="x" id="ch0103/16">
+  var xa = Number(prompt())
+  var ya = Number(prompt())
+  var xb = Number(prompt())
+  var yb = Number(prompt())
+  var result = Math.sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya))
+  console.log(result.toFixed(3))
+</script>
+
+<script type="x" id="ch0103/17">
+  var x1 = Number(prompt())
+  var y1 = Number(prompt())
+  var x2 = Number(prompt())
+  var y2 = Number(prompt())
+  var x3 = Number(prompt())
+  var y3 = Number(prompt())
+  var L1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
+  var L2 = Math.sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2))
+  var L3 = Math.sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1))
+  var p = (L1 + L2 + L3) / 2
+  var s = Math.sqrt(p * (p - L1) * (p - L2) * (p - L3))
+  console.log(s.toFixed(2))
+</script>
+
+<script type="x" id="ch0103/18">
+  var a1 = Number(prompt())
+  var a2 = Number(prompt())
+  var n = Number(prompt())
+  var result = a1 + (n - 1) * (a2 - a1)
+  console.log(result)
+</script>
+
+<script type="x" id="ch0103/19">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  console.log(a * b)
+</script>
+
+<script type="x" id="ch0103/20">
+  var n = Number(prompt())
+  var result = Math.pow(2, n)
+  console.log(result)
+</script>
