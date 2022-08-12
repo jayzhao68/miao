@@ -22,12 +22,13 @@
 </script>
 
 <script type="x" id="ch0103/04">
-  var a = Number(prompt())
-  var b = Number(prompt())
-  var result = a / b
-  var result1 = a % b
-  result.toFixed(0)
-  console.log(result.toFixed(0) +'' + result1)
+
+  var a = +prompt()
+  var b = +prompt()
+
+  var division = Math.floor(a / b)
+  var remainder = a % b
+  console.log(division, remainder  )
 
 </script>
 
@@ -48,13 +49,14 @@
 </script>
 
 <script type="x" id="ch0103/07">
+ var x = Number(prompt())
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
   var d = Number(prompt())
-  var x = Number(prompt())
-  var result = (a * (x * x * x)) + (b * (x * x) + (c * x)) + d
-  result.toFixed(7)
+
+  var result = a * x * x * x + b * x * x + c * x + d
+
   console.log(result.toFixed(7))
 </script>
 
@@ -66,13 +68,16 @@
 </script>
 
 <script type="x" id="ch0103/09">
-  var a = Number(prompt())
-  var pi = 3.14159
-  var b = 2 * pi
-  var c = 2 * pi * a
-  var d = pi * a * a
+  var r = Number(prompt())
 
-  console.log(b.toFixed(4) + '' + c.toFixed(4) + '' + d.toFixed(4))
+  var pi = Math.PI
+
+  var d = 2 * r
+  var l = 2 * pi * r
+  var a = pi * r * r
+
+
+  console.log(d.toFixed(4), l.toFixed(4), a.toFixed(4))
 </script>
 
 <script type="x" id="ch0103/10">
@@ -84,10 +89,12 @@
 </script>
 
 <script type="x" id="ch0103/11">
-  var a = Number(prompt())
+   var a = Number(prompt())
   var b = Number(prompt())
-  var c = a % b
-  console.log(c)
+
+  var R = a % b
+
+  console.log(R.toFixed(4))
 </script>
 
 <script type="x" id="ch0103/12">
@@ -165,4 +172,368 @@
   var n = Number(prompt())
   var result = Math.pow(2, n)
   console.log(result)
+</script>
+
+<script type="x" id="ch0104/01">
+  var n = Number(prompt())
+  if (n>0){
+    alert('positive')
+  }else if (n=0){
+    alert('zero')
+  }else{
+    alert('negative')
+  }
+
+</script>
+
+<script type="x" id="ch0104/02">
+var n = Number(prompt())
+if(n<0){
+  alert(-n)
+}else{
+  alert(n)
+}
+
+</script>
+
+<script type="x" id="ch0104/03">
+var n = Number(prompt())
+if (n % 2 ==0){
+  alert('even')
+}else{
+  alert('odd')
+}
+
+</script>
+
+<script type="x" id="ch0104/04">
+var char = prompt()
+var code = char.charCodeAt(0)
+if (code % 2 == 1){
+  alert('YES')
+}else{
+  alert('NO')
+}
+
+</script>
+
+<script type="x" id="ch0104/05">
+var x = Number(prompt())
+var y = Number(prompt())
+if (x>y){
+  alert('>')
+}else if (x=y){
+  alert('=')
+}else{
+  alert('<')
+}
+
+</script>
+
+<script type="x" id="ch0104/06">
+var n = Number(prompt())
+if (n<100){
+  alert('1')
+}else {
+  alert(0)
+}
+
+
+
+</script>
+
+<script type="x" id="ch0104/07">
+var a = Number(prompt())
+var b = Number(prompt())
+if(a>=10 || b>=20){
+  alert('1')
+}else{
+  alert('0')
+}
+
+</script>
+
+<script type="x" id="ch0104/08">
+var n = Number(prompt())
+if(n % 3 == 0 && n % 5 ==0){
+  alert('YES')
+}else {
+  alert('NO')
+}
+
+</script>
+
+<script type="x" id="ch0104/09">
+var n = Number(prompt())
+if (n % 3 ==0 || n % 5 ==0 || n % 7 == 0){
+  if (n % 3 ==0){
+    alert(3)
+  }
+  if (n%5==0){
+    alert(5)
+  }
+  if (n%7==0){
+    alert(7)
+  }
+}else {
+  alert('n')
+}
+
+
+</script>
+
+<script type="x" id="ch0104/10">
+var a = Number(prompt())
+var b = Number(prompt())
+if (a<60||b<60){
+  alert(1)
+}else{
+  alert(0)
+}
+
+
+</script>
+
+<script type="x" id="ch0104/11">
+var n = prompt('星期'+n)
+if (n==1||n==3||n==5){
+  alert('NO')
+}else if (n==2||n==4||n==6||n==7){
+  alert('YES')
+}else{
+  alert('请输入1-7')
+}
+
+</script>
+
+<script type="x" id="ch0104/12">
+var n = Number(prompt())
+if ((n/1.2)>(n/3.0+50)){
+  alert('Bike')
+}else if ((n/1.2)<(n/3.0+50)){
+  alert('Walk')
+}else{
+  alert('All')
+}
+
+
+</script>
+
+<script type="x" id="ch0104/13">
+var n = Number(prompt())
+if(n>=0||n<5){
+  alert((-n+2.5).toFixed(3))
+}else if (n>=5||n<10){
+  alert((2-1.5*(n-3)*(n-3)).toFixed(3))
+
+}else if (n>=10||n<20){
+  alert((n/2-1.5).toFixed(3))
+}
+
+</script>
+
+<script type="x" id="ch0104/14">
+var weight = Number(prompt())
+  var emergency = prompt()
+  var price
+
+  if (emergency == 'y') {
+    if (weight > 1000) {
+      price = 8 + Math.ceil((weight - 1000) / 500) * 4 + 5
+    } else {
+      price = 8 + 5
+    }
+  } else {
+    if (weight > 1000) {
+      price = 8 + Math.ceil((weight - 1000) / 500) * 4
+    } else {
+      price = 8
+    }
+  }
+
+  console.log(price)
+
+
+
+</script>
+
+<script type="x" id="ch0104/15">
+var a = Number(prompt())
+var b = Number(prompt())
+var c = Number(prompt())
+if (a>b && a>c){
+  alert(a)
+}else if (b>a && b>c){
+  alert(b)
+}else if (c>a && c>b){
+  alert(c)
+}
+
+</script>
+
+<script type="x" id="ch0104/16">
+var a = Number(prompt())
+var b = Number(prompt())
+var c = Number(prompt())
+if((a+b)>c){
+  alert('yes')
+}else {
+  alert('no')
+}
+
+</script>
+
+<script type="x" id="ch0104/17">
+var a = Number(prompt())
+if (a%4==0 && a%100 !==0||a%400==0){
+  alert('Y')
+}else {
+  alert( 'N')
+}
+
+</script>
+
+<script type="x" id="ch0104/18">
+var x = Number(prompt())
+var y = Number(prompt())
+if ((x>=-1 && x<=1)&&(y>=-1&&y<=1)){
+  alert('yes')
+}else {
+  alert('no')
+}
+
+</script>
+
+<script type="x" id="ch0104/19">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var op = prompt()
+
+  if (op == '+') {
+    console.log(a + b)
+  } else if (op == '-') {
+    console.log(a - b)
+  } else if (op == '*') {
+    console.log(a * b)
+  } else if (op == '/') {
+    if (b == 0) {
+      console.log('Divided by zero!')
+    } else {
+      console.log(a / b)
+    }
+  } else {
+    console.log('Invalid operator!')
+  }
+
+
+</script>
+
+<script type="x" id="ch0104/20">
+
+
+
+</script>
+
+<script type="x" id="ch0104/21">
+var n = Number(prompt())
+var x = Number(prompt())
+var y = Number(prompt())
+if (n-(y/x)){
+  alert(Math.floor(n-(y/x)))
+}
+
+</script>
+
+
+<!-- <script type="" id="ch0105/01">
+for (起始条件；退出条件；变化量){
+循环语句
+}
+</script>
+ -->
+
+
+<script type="x" id="ch0105/00">
+
+/* for (var i = 1;i <= 5;i++){
+  if (i===2){
+    // continue 继续 退出本次循环 继续下一次循环
+    // break 结束循环 退出整个循环
+  }
+  document.write('#')
+}  */
+for (var i = 1;i < 6; i++){
+  for (var j=1;j<6;j++){
+    document.write('#')
+  }
+} 外面循环执行一次,里面循环执行全部
+
+</script>
+<!-- for (外部声明记录循环次数的变量;循环条件;变化值){
+  for(内部声明记录循环次数的变量;循环条件;变化值){
+    循环体
+  }
+} -->
+
+<!-- <script type="" id="ch0104/20">
+  for (var i = 1;i<6;i++){
+    for(var j=1;j<6;j++){
+     document.write('xing')
+    }
+     document.write('<br>')
+    //  五个星星打完了在换行
+  }
+
+
+
+</script> -->
+
+<script type="x" id="ch0105/02">
+   var sum = 0
+for (var i=1;i<=12;i++){
+  var m = Number(prompt())
+       sum = sum + m
+}
+console.log('$'+(sum/12).toFixed(2))
+
+</script>
+
+<script type="x" id="ch0105/05">
+var n = Number(prompt())
+for (var n = 1;n<100;n++){
+var s = Number(prompt())
+  n=s
+}
+  console.log(Math.max(s))
+
+</script>
+
+<script type="x" id="ch0105/07">
+var jinsum=0
+var yinsum=0
+var tongsum=0
+var all=0
+var n=Number(prompt())
+for (var i=1;i<=n;i++){
+
+  var jin = Number(prompt())
+  var yin = Number(prompt())
+  var tong = Number(prompt())
+  jinsum=jin+jinsum
+  yinsum=yin+yinsum
+  tongsum=tong+tongsum
+  all=jinsum+yinsum+tongsum
+}
+console.log(jinsum,yinsum,tongsum,all)
+
+
+</script>
+
+<script type="" id="ch0105/05">
+for (i=1;i<=7;i++){
+  for (j=1;;j++)
+  console.log('#')
+  console.log('<br>')
+}console.log('#'.length)
+
 </script>
