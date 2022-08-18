@@ -1147,15 +1147,155 @@ console.log(count)
 
 
 </script>
-<!-- <script>
-  var str = ''
-  for (var i = 1; i <= 7; i++) {
-    for (var j = 1; j <= i; j++) {
-      str = str + '#'
+<script type="x" id="ch0105/42">
+var h = Number(prompt())
+var w = Number(prompt())
+var char = Number(prompt())
+var fill = Number(prompt())
 
+var result = ''
+for (var i=0;i<h;i++){
+  for (var j=0;j<w;j++){
+    if(i == 0|| j==0||i==h-1||j==w-1){
+      result +=char
+    }else{
+      if (fill){
+        result+=char
+      }else {
+        result+=''
+      }
     }
-    str = str + '\n'
+
   }
-  console.log(str);
+  if (i !==h -1){
+    result +='\n'
+  }
+}
+console.log(result);
+
 </script>
- -->
+<script type="x" id="ch0105/43">
+var n = Number(prompt())
+for (var i=2;i<n;i++){
+  if (n%i==0){
+    console.log(n/i)
+    break
+  }
+}
+
+</script>
+<script type="x" id="ch0105/44">
+var n = Number(prompt())
+var count=0
+for (i=2;;i++){
+  var i是素数 = true
+  for (var j = 2;j<i;j++){
+    if(i%j==0){
+      i是素数 = false
+      break
+    }
+  }
+  if (i是素数){
+    count++
+    if (count==n){
+      console.log(i);
+      break
+    }
+  }
+}
+
+
+</script>
+<script type="" id="ch0105/45">
+var n = Number(prompt())
+var sum = 0
+var coins= 1
+var days=0
+for (var i =1;i<=n;i++){
+  sum=sum+coins
+  days++
+  if (days ===coins){
+    coins++
+    days=0
+  }
+}
+console.log(sum);
+</script>
+<script type="x" id="narcissistics">
+
+for (var i = 100;i<10000;i++){
+  var ge = i%10
+  var shi = (i-ge)/10%10
+  var bai = (i-i%100)/100
+  if (i == ge**3+shi**3+bai**3&&i !== 1000 && i!==1001){
+    console.log(i);
+  }
+}
+
+</script>
+<script type="x" id="narcissistic">
+  var n = Number(prompt())
+
+  var ge = n%10
+  var shi = (n-ge)/10%10
+  var bai = (n-n%100)/100
+  if (n == ge**3+shi**3+bai**3){
+    console.log("YES");
+  }else{
+    console.log('NO');
+  }
+
+  </script>
+<script id="palindrom">
+
+  // 判断n是否是回文数
+  function isPalindrom(n) {
+    var str = ''
+
+    var m = n
+    do {
+      var ge = n % 10
+      str += ge
+      n = (n - ge) / 10
+    } while (n > 0)
+
+    if (Number(str) == m) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+
+  function isPalindrom(n) {
+    var reverse = 0
+
+    var m = n
+    do {
+      var ge = n % 10
+      reverse = reverse * 10 + ge
+      n = (n - ge) / 10
+    } while (n > 0)
+
+    if (reverse == m) {
+      return true
+    } else {
+      return false
+    }
+  }
+</script>
+<script id="weekday">
+
+    function isLeapYear(year) {
+      if (year % 400 == 0) {
+        return true
+    }
+    if (year % 100 == 0) {
+      return false
+    }
+    if (year % 4 == 0) {
+      return true
+    }
+    return false
+  }
+</script>
