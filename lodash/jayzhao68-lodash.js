@@ -43,7 +43,7 @@ var jayzhao68 = {
   },
 
 
-  drop: function (array, [n = 1]) {
+  drop: function (array, n = 1) {
     var newarray = []
     for (var i = n; i < array.length; i++) {
       newarray.push(array[i])
@@ -51,12 +51,14 @@ var jayzhao68 = {
     return newarray
   },
 
-  fill: function (array, value, [start = 0], [end = array.length]) {
-    for (var i = 0; i < array.length; i++) {
-      array.push(value)
+  fill: function (array, value, start = 0, end = array.length) {
+    for (var i = start; i < end; i++) {
+      array[i] = value
     }
     return array
   }
-
+  , head: function (array) {
+    return array[0]
+  }
 
 }
