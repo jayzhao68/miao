@@ -19,8 +19,4 @@ var jayzhao68 = {
     }
     return newarray
   }
-},
-
-  compact: function () { },
-
-  fill: function () { },
+}
