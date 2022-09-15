@@ -59,6 +59,35 @@ var jayzhao68 = {
   }
   , head: function (array) {
     return array[0]
-  }
+  },
 
+  indexOf: function (array, value, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
+  },
+
+  lastIndexOf: function (array, value, fromIndex = array.length - 1) {
+    for (var i = fromIndex; i >= 0; i--) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
+  },
+  initial: function (array) {
+    var newarray = []
+    for (var i = 0; i <= array.length - 2; i++) {
+      newarray.push(array[i])
+    }
+    return newarray
+  },
+  last: function (array) {
+
+    return array[array.length - 1]
+
+  }
 }
