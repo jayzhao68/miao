@@ -89,5 +89,71 @@ var jayzhao68 = {
 
     return array[array.length - 1]
 
-  }
+  },
+
+  pull: function (array, ...values) {
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      if (!(values.includes(array[i]))) {
+        result.push(array[i])
+      }
+    }
+    return result
+  },
+
+
+  every: function (array, predicate) {
+    for (var i = 0; i < array.length; i++) {
+      if (!predicate(array[i], i, array)) {
+        return false
+      }
+    }
+    return ture
+  },
+
+  some: function (array, predicate) {
+    for (var i = 0; i < array.length; i++) {
+      if (predicate(array[i], i, array)) {
+        return true
+      }
+    }
+    return false
+  },
+
+  isUndefined: function (value) {
+    return value === undefined
+  },
+
+  isNull: function (value) {
+    return value === null
+  },
+
+  isNil: function (value) {
+    if (value === undefined || value === null) {
+      return ture
+    }
+    return false
+
+  },
+
+  max: function (array) {
+    var max = array[0]
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] > max) {
+        max = array[i]
+      }
+    }
+    return max
+  },
+
+  min: function (array) {
+    var min = array[0]
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] < min) {
+        min = array[i]
+      }
+    }
+    return min
+  },
+
 }
