@@ -234,6 +234,164 @@ var jayzhao68 = {
     }
     return false
   },
+  isdropRight: function (array, n = 1) {
+    var res = []
+    res = array.slice()
+    for (var i = 1; i <= n; i++) {
+      res.pop()
+    }
+    return res
+  },
+
+  isFlatten: function (array) {
+    var newAry = []
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        var t = array[i]
+        for (var j = 0; i < t.length; j++) {
+          newAry.push(t[j])
+        }
+
+      } else newAry.push(array[i])
+    }
+    return newAry
+  },
+
+  isflattenDeep: function (array) {
+    var newAry = []
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        newAry = newAry.concat(flattenDeep(array[i]))
+      } else {
+        newAry.push(array[i])
+      }
+    }
+    return newAry
+  },
+
+  isfromPairs: function (pairs) {
+    var map = {}
+    for (var i = 0; i < pairs.length; i++) {
+      var t = pairs[i]
+      var str = t[0]
+      map[str] = t[1]
+    }
+    return map
+  },
+
+  isintersection: function (...arrays) {
+    var newAry = []
+    var map = {}
+    for (var j = 0; j < arrays.length; j++) {
+      var t = arrays[j]
+      for (var i = 0; i < t.length; i++) {
+        if (map[t[i]]) {
+          map[t[i]]++
+        } else {
+          map[t[i]] = 1
+        }
+      }
+    }
+    for (var k in map) {
+      if (map[k] == arrays.length) {
+        newAry.push(Number(k))
+      }
+    }
+    return newAry
+  },
+  isjoin: function (array, seperator = ',') {
+    var newStr = ''
+    for (var i = 0; i < array.length; i++) {
+      if (i == array.length - 1) {
+        newStr = newStr + array[i]
+      } else {
+        newStr = newStr + array[i] + seperator
+      }
+    }
+    return newStr
+  },
+
+  isreverse: function (array) {
+    var newAry = []
+    for (i = array.length - 1; i >= 0; i--) {
+      newAry.push(array[i])
+    }
+    return newAry
+  },
+
+  issortIndex: function (array, value) {
+    for (var i = 0; i < array.length; i++) {
+      if (value <= array[i]) {
+        return i
+      }
+    }
+  },
+
+  isunion: function (...arrays) {
+    var map = {}
+    var newAry = []
+    for (var i = 0; i < arrays.length; i++) {
+      var t = arrays[i]
+      for (var j = 0; j < t.length; j++) {
+        if (t[j] in map) {
+
+        } else {
+          map[t[j]] = 1
+          newAry.push(t[j])
+        }
+      }
+    }
+    return newAry
+  },
+  isuniq: function (array) {
+    var map = {}
+    var newAry = []
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] in map) {
+
+      } else {
+        map[array[i]] = 1
+        newAry.push(array[i])
+      }
+    }
+    return newAry
+  },
+
+  isunzip: function (array) {
+    var newAry = []
+    for (var i = 0; i < array[0].length; i++) {
+      var arr = []
+      var j = 0
+      while (j < array.length) {
+        arr.push(array[j][i])
+        j++
+      }
+      newAry.push(arr)
+    }
+    return newAry
+  },
+
+  iswithout: function (array, ...values) {
+    var newAry = []
+    for (var i = 0; i < array.length; i++) {
+      if (!values.includes(array[i])) {
+        newAry.push(array[i])
+      }
+    }
+    return newAry
+  },
+
+  iszip: function (...arrays) {
+    var newAry = []
+    for (var i = 0; i < arrays.length - 1; i++) {
+      var ary = []
+      for (var j = 0; j < arrays.length; j++) {
+        ary.push(arrays[j][i])
+      }
+      newAry.push(ary)
+    }
+    return newAry
+  },
 
 
 
