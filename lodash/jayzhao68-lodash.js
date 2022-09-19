@@ -155,5 +155,89 @@ var jayzhao68 = {
     }
     return min
   },
+  sumBy: function (array, predicate = identity) {
+    predicate = iteratee(predicate)
+    var result = 0
+    for (var i = 0; i < array.length; i++) {
+      result += predicate(array[i])
+    }
+    return result
+  },
+
+  isArray: function (value) {
+    return Array.isArray(value)
+  },
+
+
+  toArray: function (value) {
+    res = []
+    for (let key in value) {
+      res.push(value[key])
+    }
+    return res
+  },
+
+  isFunction: function () {
+    return typeof value === 'function'
+  },
+
+  isEqual: function (val, other) {
+    if (val === other) {
+      return true
+    }
+    if (val !== val && other !== other) {
+      return true
+    }
+    if (Array.isArray(val) && Array.isArray(other)) {
+      if (val.length !== other.length) {
+        return false
+      }
+      for (var i = 0; i < val.length; i++) {
+        if (!isEqual(val[i], other[i])) {
+          return false
+        }
+      }
+      return ture
+    }
+    if (!Array.isArray(val) && !Array.isArray(other) && val && other && typeof val === 'object' && typeof other == 'object') {
+      for (var key in val) {
+        if (!(key in other)) {
+          return false
+        }
+      }
+      for (var key in other) {
+        if (!(key in val)) {
+          return false
+        }
+      }
+      for (var key in val) {
+        if (!isEqual(val[key], other[key])) {
+          return false
+        }
+      }
+      return true
+    }
+    return false
+  },
+
+  isEmpty: function (value) {
+    for (let key in value) {
+      return false
+    }
+    return true
+  },
+
+
+  isBoolean: function (value) {
+    if (value == true || value == false) {
+      return true
+    }
+    return false
+  },
+
+
+
+
+
 
 }
