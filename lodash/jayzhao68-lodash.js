@@ -395,7 +395,32 @@ var jayzhao68 = {
 
 
 
-
+  iscountBy: function (collection, iteratee) {
+    if (typeof iteratee == 'function') {
+      var newAry = []
+      var map = {}
+      for (var i = 0; i < collection.length; i++) {
+        var k = iteratee(collection[i])
+        if (k in map) {
+          map[k]++
+        } else map[k] = 1
+      }
+      return map
+    }
+    if (typeof iteratee == 'string') {
+      var map = {}
+      for (var i = 0; i < collection.length; i++) {
+        var num = 0
+        for (var j = 0; j < collection[i].length; j++) {
+          num++
+        }
+        if (num in map) {
+          map[num]++
+        } else map[num] = 1
+      }
+      return map
+    }
+  }
 
 
 }
