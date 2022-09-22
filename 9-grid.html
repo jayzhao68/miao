@@ -6,49 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .float {
-      margin: 50px;
-      height: 300px;
-      width: 300px;
-    }
 
-    .float>li {
-      box-sizing: border-box;
-      float: left;
-      width: 100px;
-      height: 100px;
-      margin-left: -5px;
-      margin-top: -5px;
-      line-height: 100px;
-      text-align: center;
-      list-style: none;
-      border: 5px solid blue;
-      color: green;
-    }
-
-    .float>li:hover {
-      border-color: red;
-      position: relative;
-    }
-
-  </style>
 </head>
 
 <body>
-  <ul class="float">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>Float</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-  </ul>
 
+<script>
+  function isLeapYear(year) {
+    if (year % 400 == 0) {
+      return true
+    }
+    if (year % 100 == 0) {
+      return false
+    }
+    if (year % 4 == 0) {
+      return true
+    }
+    return false
+  }
+  function is31DayMonth(n) {
+    return n == 1 || n == 3 || n == 5 || n == 7 || n == 8 || n == 10 || n == 12
+  }
+  function getMonthDay(year, month) {
+    if (month == 2) {
+      if (isLeapYear(year)) {
+        return 29
+      } else {
+        return 28
+      }
+    }
+    if (is31DayMonth(month)) {
+      return 31
+    }
+    return 30
+  }
+  function weekday(year, month) {
+    var y = year - 1
+    var days = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
+    for (var m = 1; m < month; m++) {
+      days += getMonthDay(year, m)
+    }
+    days++ // 加上当月的第一天
+    return days % 7
+  }
 
+</script>
 
 
 </body>

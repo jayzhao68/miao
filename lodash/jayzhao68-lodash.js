@@ -243,7 +243,7 @@ var jayzhao68 = {
     return res
   },
 
-  isFlatten: function (array) {
+  flatten: function (array) {
     var newAry = []
     for (var i = 0; i < array.length; i++) {
       if (Array.isArray(array[i])) {
@@ -257,7 +257,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  isflattenDeep: function (array) {
+  flattenDeep: function (array) {
     var newAry = []
     for (var i = 0; i < array.length; i++) {
       if (Array.isArray(array[i])) {
@@ -269,7 +269,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  isfromPairs: function (pairs) {
+  fromPairs: function (pairs) {
     var map = {}
     for (var i = 0; i < pairs.length; i++) {
       var t = pairs[i]
@@ -279,7 +279,7 @@ var jayzhao68 = {
     return map
   },
 
-  isintersection: function (...arrays) {
+  intersection: function (...arrays) {
     var newAry = []
     var map = {}
     for (var j = 0; j < arrays.length; j++) {
@@ -299,7 +299,7 @@ var jayzhao68 = {
     }
     return newAry
   },
-  isjoin: function (array, seperator = ',') {
+  join: function (array, seperator = ',') {
     var newStr = ''
     for (var i = 0; i < array.length; i++) {
       if (i == array.length - 1) {
@@ -311,7 +311,7 @@ var jayzhao68 = {
     return newStr
   },
 
-  isreverse: function (array) {
+  reverse: function (array) {
     var newAry = []
     for (i = array.length - 1; i >= 0; i--) {
       newAry.push(array[i])
@@ -319,7 +319,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  issortIndex: function (array, value) {
+  sortIndex: function (array, value) {
     for (var i = 0; i < array.length; i++) {
       if (value <= array[i]) {
         return i
@@ -327,7 +327,7 @@ var jayzhao68 = {
     }
   },
 
-  isunion: function (...arrays) {
+  union: function (...arrays) {
     var map = {}
     var newAry = []
     for (var i = 0; i < arrays.length; i++) {
@@ -343,7 +343,7 @@ var jayzhao68 = {
     }
     return newAry
   },
-  isuniq: function (array) {
+  uniq: function (array) {
     var map = {}
     var newAry = []
     for (var i = 0; i < array.length; i++) {
@@ -357,7 +357,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  isunzip: function (array) {
+  unzip: function (array) {
     var newAry = []
     for (var i = 0; i < array[0].length; i++) {
       var arr = []
@@ -371,7 +371,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  iswithout: function (array, ...values) {
+  without: function (array, ...values) {
     var newAry = []
     for (var i = 0; i < array.length; i++) {
       if (!values.includes(array[i])) {
@@ -381,7 +381,7 @@ var jayzhao68 = {
     return newAry
   },
 
-  iszip: function (...arrays) {
+  zip: function (...arrays) {
     var newAry = []
     for (var i = 0; i < arrays.length - 1; i++) {
       var ary = []
@@ -395,7 +395,7 @@ var jayzhao68 = {
 
 
 
-  iscountBy: function (collection, iteratee) {
+  countBy: function (collection, iteratee) {
     if (typeof iteratee == 'function') {
       var newAry = []
       var map = {}
@@ -420,7 +420,7 @@ var jayzhao68 = {
       }
       return map
     }
-  }
+  },
 
 
 }
